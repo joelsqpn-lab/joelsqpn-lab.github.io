@@ -44,8 +44,7 @@
         {
             font-size:40px;
             color:white;
-            animation:fade 2s forwards;
-            animation-delay:2s;
+           
         }
        
        
@@ -62,8 +61,7 @@
         }
         h2
         {
-            animation:move 1s infinite;
-            animation-delay:4s;
+           font-size:30px;
         }
         @keyframes show
         {
@@ -78,15 +76,42 @@
                 transform:translateY(0);
             }
         }
+    .box
+        {
+            animation:show 1.5s forwards;
+            opacity:30px;
+        }
+        .one 
+        {
+            animation-delay:2s
+        }
+        .two
+        {
+            animation-delay:4s
+        }
+        .three
+        {
+            animation-delay:6s
+            animation-name:show,move;
+            animation-duration:1.5s,1s;
+            animation-iteration-count:1,infinite;
+        }
+            
         
         
     </style>
 <body>
-     <h1>I am gonna be a billionaire.</h1>
+    <div class="box one">
+    <h1>I am gonna be a billionaire.</h1>
+    </div>
+        <div class="box two">
      <p>
         I will build my future with hardwork and discipline
      </p>
+        </div>
+            <div class="box three">
     <h2>😎🎶</h2>
+            </div>
    
 </body>
 </html>
