@@ -7,7 +7,7 @@
     <style>
         body{
             display:flex;
-            flex direction:column;
+            flex-direction:column;
             justify-content:center;
             align-items:center;
            height:100vh;
@@ -45,6 +45,7 @@
             font-size:40px;
             color:white;
             animation:fade 2s;
+            animation-delay:2s;
         }
        
        
@@ -61,8 +62,23 @@
         }
         h2
         {
-            animation:move 1s infinite;
+            animation:show 3s forward,move 1s infinite;
+            animation-delay:2s;
         }
+        @keyframes show
+        {
+            from
+            {
+                opacity:o;
+                transform:translateY(30px)
+            }
+            to
+            {
+                opacity:1;
+                transform:translateY(0)
+            }
+        }
+        
         
     </style>
 <body>
